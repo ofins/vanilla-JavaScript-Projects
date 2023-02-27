@@ -1,0 +1,137 @@
+:root {
+    --transition: all 0.5s linear;
+    --header-color1:rgb(23, 153, 185);
+    --background-color:rgb(218, 241, 240);
+    --hover-color1:rgb(15, 133, 127);
+}
+
+* {
+    box-sizing:border-box;
+}
+
+.blue{
+    color:var(--header-color1);
+}
+
+body {
+    background: var(--background-color);
+    overflow: hidden;
+}
+
+.toggle-box {
+    position:fixed;
+    right:2%;
+    top:2%;
+    font-size:3rem;
+    transition: var(--transition);
+}
+
+#toggle {
+    animation: bounce 2s ease-in-out infinite;
+}
+
+#toggle:hover {
+    cursor:pointer;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+        color:black
+    }
+    50% {
+        transform: scale(1.2);
+        color:var(--hover-color1);
+    }
+    100% {
+        transform: scale(1);
+        color:black;
+    }
+}
+
+.header {
+    display:flex;
+}
+
+.fa-square-xmark{
+    font-size:3rem;
+    margin-left:35px;
+    margin-top:80px;
+    padding:0 10px;
+}
+
+.fa-square-xmark:hover{
+    transform: rotate(360deg);
+    transition: var(--transition);
+    color:red;
+    cursor:pointer;
+}
+
+.navbar {
+    background-color: white;
+    width:20%;
+    height:100vh;
+    position:absolute;
+    left:0;
+    top:0;
+    transition: var(--transition);
+    box-shadow: 3px 0 10px rgb(224, 224, 231);
+    display:flex;
+    flex-direction: column;
+    align-items:left;
+}
+
+.navbar h2 {
+    letter-spacing: 2px;
+    font-family: monospace;
+    font-size:2rem;
+    margin-left:30px;
+    text-shadow: 3px 4px 10px grey;
+}
+
+.hide{
+    transform: translateX(-100%);
+}
+
+.navbar ul{
+    overflow-x:hidden;
+}
+
+.navbar ul li{
+    list-style: none;
+    display:block;
+    text-transform: capitalize;
+    padding: 1rem 1.5rem;
+    transition: var(--transition);
+    width:150%;
+    position:relative;
+    left:-14%;
+}
+
+
+.navbar ul li:hover {
+    background-color: var(--hover-color1);
+    cursor:pointer;
+    padding-left:2rem;
+    
+}
+
+.navbar a{
+    text-decoration:none;
+    color:rgb(83, 210, 248);
+    font-family: monospace;
+    font-size:2rem;
+    letter-spacing: 3px;
+    line-height:3rem;
+}
+
+.social-box {
+    position:absolute;
+    bottom:5%;
+    left:25%;
+    letter-spacing: 3px;
+}
+
+.social-icons:hover {
+    color:var(--hover-color1);
+}

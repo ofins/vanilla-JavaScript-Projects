@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+html {
+    height:100%;
+    overflow:hidden;
+    display:grid;
+    place-items: center;
+}
+
+html img {
+    height:100vh;
+    z-index: -1;
+    width:100%;
+    position:fixed;
+    left:0;
+    top:0;
+    object-fit:cover;
+}
+
+.container {
+    height:32vh;
+    width:50vh;
+    text-align: center;
+    padding-top:50px;
+    border-radius:9px;
+    background-color: white;
+    box-shadow: 0 0 10px black;
+    display:grid;
+    place-items: center;
+
+}
+
+#open-btn {
+    width:150px;
+    height:35px;
+    border-radius:5px;
+    background-color: transparent;
+    letter-spacing: 3px;
+    transition:all 0.4s linear;
+}
+
+#open-btn:hover {
+    cursor:pointer;
+    background-color: black;
+    color:white;
+}
+
+/*OPEN MODAL */
+.container-overlay {
+    position:absolute;
+    width:55vh;
+    height:40vh;
+    color:black;
+    background-color: white;
+    border-radius: 9px;
+    box-shadow: 0 0 10px black;
+}
+
+.container-overlay h2 {
+    position:absolute;
+    left:30%;
+    top:30%;
+    letter-spacing:5px;
+    
+}
+
+#close-btn {
+    position:absolute;
+    top:1%;
+    right:1%;
+    background-color: transparent;
+    font-weight:bold;
+    font-size:1.5rem;
+    border-style:none;
+    color:red;
+    transition: all 0.5s ease-in-out;
+}
+
+#close-btn:hover {
+    cursor:pointer;
+    transform:scale(1.3);
+    text-shadow:0 0 5px red;
+}
+
+.hide-overlay {
+    transform: translateY(-300%);
+    transition-delay:0.2s;
+}
+
+.blur {
+    z-index:-1;
+    width:100%;
+    height:100vh;
+    position:absolute;
+    background-color: aqua;
+    top:0;
+    left:0;
+    opacity:50%;
+}

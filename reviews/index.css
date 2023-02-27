@@ -1,0 +1,153 @@
+/* UNIVERSAL */
+:root{
+    --background-color: rgb(221, 233, 238);
+    --lightblue: rgb(79, 160, 207);
+}
+
+* {
+    font-family: monospace;
+}
+
+h1 {
+    letter-spacing: 3px;
+    font-size:3rem;
+    font-family:monospace;
+}
+
+.underline {
+    height:0.25rem;
+    background-color: var(--lightblue);
+    width:5rem;
+    margin-top:-18px;
+}
+
+body {
+    width:100%;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    background-color: var(--background-color);
+    
+}
+
+/*inside the box */
+
+.box {
+    width:35%;
+    height:50vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius:10px;
+    box-shadow: 0 0 10px grey;
+    margin-top:50px;
+    padding:15px;
+    background-color: ghostwhite;
+}
+
+.inner-box {
+    position:fixed;
+    bottom:24%;
+    letter-spacing: 10px;
+    margin-left:10px;
+}
+
+/*left and right arrow keys */
+
+.left-arrow, .right-arrow {
+    font-size:2.5rem;
+}
+
+.left-arrow:hover, .right-arrow:hover {
+    color:var(--lightblue);
+    text-shadow: 0 1px 10px grey;
+    transition-duration:0.5s;
+    cursor:pointer;
+}
+
+.left-arrow:active, .right-arrow:active {
+    transform: translateY(-5px);
+}
+
+/* button styles */
+button {
+    width:100px;
+    height:30px;
+    border-radius: 5px;
+    background-color: transparent;
+    border:1px solid black;
+    margin-top:10px;
+    position:fixed;
+    bottom:19%;
+}
+
+button:hover {
+    cursor:pointer;
+    background-color: var(--lightblue);
+    border-color:var(--lightblue);
+    color:white;
+    transition-duration: 0.5s;
+}
+
+button:active {
+    transform:scale(0.8);
+}
+
+img {
+    border-radius:50%;
+    object-fit: cover;
+    height:150px;
+    width:150px;
+    box-shadow:0 0 10px grey;
+    position:absolute;
+    top:35%;
+}
+
+.circle {
+    background-color: var(--lightblue);
+    height:150px;
+    width:150px;
+    border-radius:50%;
+    z-index:0;
+    position:absolute;
+    top:34.3%;
+    left:46.7%;
+}
+
+.profile {
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*name*/
+.profile h2 {
+    margin-bottom:-10px;
+    letter-spacing: 3px;
+    position:absolute;
+    top:50%;
+}
+
+/*job title*/
+.profile h3 { 
+    font-family: monospace;
+    font-weight:normal;
+    font-size:1rem;
+    color:var(--lightblue);
+    position:absolute;
+    top:53%;
+}
+
+/*description*/
+.profile p {
+    font-size:1.2rem;
+    max-width:80%;
+    text-align: center;
+    position:relative;
+    top:60%;
+}
